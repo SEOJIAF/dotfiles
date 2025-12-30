@@ -1,0 +1,9 @@
+app.zen_browser.zen
+com.discordapp.Discord
+com.valvesoftware.Steam
+io.github.nokse22.high-tide
+it.mijorus.gearlever
+md.obsidian.Obsidian
+org.localsend.localsend_app
+org.polymc.PolyMC
+org.vinegarhq.Sober
