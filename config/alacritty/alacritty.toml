@@ -1,0 +1,86 @@
+# ============================================================
+# Basic Alacritty Configuration Template
+# ============================================================
+# This file uses TOML format (for Alacritty 0.13+)
+# Anything after a # is a comment.
+
+# ------------------------------------------------------------
+# Window settings
+# ------------------------------------------------------------
+[window]
+# Window padding in pixels
+padding = { x = 4, y = 4 }
+
+# Opacity of the window (1.0 = fully opaque)
+opacity = 0
+
+# Startup mode can be: "Windowed", "Maximized", or "Fullscreen"
+startup_mode = "Windowed"
+
+# ------------------------------------------------------------
+# Font settings
+# ------------------------------------------------------------
+[font]
+# The default font family and size
+normal.family = "FiraCode Nerd Font"
+size = 14.0
+
+# ------------------------------------------------------------
+# Colors
+# ------------------------------------------------------------
+# Commented out — defaults are used if this section is removed
+# [colors.primary]
+# background = "0x000000"  # black background
+# foreground = "0xffffff"  # white text
+
+# ------------------------------------------------------------
+# Cursor
+# ------------------------------------------------------------
+[cursor]
+# Cursor shape can be "Block", "Underline", or "Beam"
+style = { shape = "Block", blinking = "Off" }
+
+# ------------------------------------------------------------
+# Scrolling
+# ------------------------------------------------------------
+[scrolling]
+# How many lines to keep in scrollback buffer
+history = 10000
+
+# How many lines to scroll per mouse wheel tick
+multiplier = 3
+
+[terminal]
+
+# ------------------------------------------------------------
+# Shell (default terminal program)
+# ------------------------------------------------------------
+# ------------------------------------------------------------
+# Startup scripts or commands
+# ------------------------------------------------------------
+# Here you can define things to run when Alacritty launches.
+# Example:
+# program = "/usr/bin/zsh"
+[terminal.shell]
+program = "/bin/zsh"
+args = ["--login"]
+# → This runs neofetch, then starts zsh as your shell.
+# ------------------------------------------------------------
+# Key bindings
+# ------------------------------------------------------------
+# Example custom keybindings (optional)
+# [[keyboard.bindings]]
+# key = "V"
+# mods = "Control|Shift"
+# action = "Paste"
+#
+# [[keyboard.bindings]]
+# key = "C"
+# mods = "Control|Shift"
+# action = "Copy"
+
+
+# ------------------------------------------------------------
+# End of config
+# ------------------------------------------------------------
+

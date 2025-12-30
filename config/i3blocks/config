@@ -1,0 +1,44 @@
+[battery]
+command=/bin/sh -c 'PCT=$(cat /sys/class/power_supply/BAT0/capacity); STATUS=$(cat /sys/class/power_supply/BAT0/status); echo "$PCT% $STATUS"'
+interval=30
+color=#cdd6f4
+
+
+[cpu]
+command=grep 'cpu ' /proc/stat | awk '{u=$2+$4; t=$2+$4+$5} END {print int((u/t)*100) "%"}'
+interval=5
+color=#f38ba8
+
+[mem]
+command=~/.config/i3blocks/mem.sh
+interval=20
+color=#f9e2af
+
+
+
+[disk]
+command=df -h / | awk 'NR==2 {print $3"/"$2}'
+interval=60
+color=#a6e3a1
+
+[net]
+command=ip route get 1.1.1.1 >/dev/null 2>&1 && echo online || echo offline
+interval=10
+color=#89b4fa
+
+[volume]
+command=pamixer --get-volume-human
+interval=5
+signal=10
+color=#fab387
+
+[backlight]
+command=brightnessctl g && brightnessctl m | awk '{print int(($1/$2)*100)"%"}'
+interval=10
+color=#94e2d5
+
+[time]
+command=date '+%Y-%m-%d %H:%M'
+interval=1
+color=#cba6f7
+
